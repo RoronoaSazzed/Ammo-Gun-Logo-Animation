@@ -13,6 +13,11 @@
         box-sizing: border-box;
       }
 
+      :root {
+        --animationDuration: 6s;
+        --animationIteration: infinite;
+      }
+
       .parentDiv {
         min-height: 100vh;
         display: grid;
@@ -25,31 +30,37 @@
       }
 
       #top-text {
-        animation: topTextIn 6s ease-out infinite;
+        animation: topTextIn var(--animationDuration) ease-out
+          var(--animationIteration);
       }
 
       #bottom-text {
-        animation: bottomTextIn 6s ease-out infinite;
+        animation: bottomTextIn var(--animationDuration) ease-out
+          var(--animationIteration);
       }
 
       #separator {
         stroke-dasharray: 1150.9970703125px;
         stroke-dashoffset: 1150.9970703125px;
-        animation: separatorIn 6s ease-out infinite;
+        animation: separatorIn var(--animationDuration) ease-out
+          var(--animationIteration);
       }
 
       #site-link {
         clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-        animation: siteLinkIn 6s ease-out infinite;
+        animation: siteLinkIn var(--animationDuration) ease-out
+          var(--animationIteration);
       }
 
       #site-link-target {
         opacity: 0;
-        animation: targetLinkIn 6s ease-out infinite;
+        animation: targetLinkIn var(--animationDuration) ease-out
+          var(--animationIteration);
       }
 
       #digit {
-        animation: digitIn 6s ease-out infinite;
+        animation: digitIn var(--animationDuration) ease-out
+          var(--animationIteration);
       }
 
       #target {
@@ -66,19 +77,23 @@
 
       #target {
         opacity: 0;
-        animation: targetIn 6s ease-in-out infinite;
+        animation: targetIn var(--animationDuration) ease-in-out
+          var(--animationIteration);
       }
 
       #top-shoot {
-        animation: topShootIn 6s ease-in-out infinite;
+        animation: topShootIn var(--animationDuration) ease-in-out
+          var(--animationIteration);
       }
 
       #bottom-shoot {
-        animation: bottomShootIn 6s ease-in-out infinite;
+        animation: bottomShootIn var(--animationDuration) ease-in-out
+          var(--animationIteration);
       }
 
       #main-logo {
-        animation: logoShock 6s ease-in-out infinite;
+        animation: logoShock var(--animationDuration) ease-in-out
+          var(--animationIteration);
       }
 
       @keyframes digitIn {
